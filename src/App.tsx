@@ -69,7 +69,7 @@ export default function App() {
         ))}
       </div>
       <button
-        className="px-4 sm:px-6 md:px-8 py-2 sm:py-4 md:py-6 text-lg sm:text-xl md:text-2xl text-white font-bold rounded-md bg-[#5036FF]  mt-8 sm:mt-10 tracking-wider"
+        className="px-4 sm:px-6 md:px-8 py-2 sm:py-4 md:py-6 text-lg sm:text-xl md:text-2xl text-white font-bold rounded-md bg-[#5036FF]  mt-8 sm:mt-10  tracking-wider mb-10"
         onClick={rollDice}
       >
         {tenzies ? "New Game" : "Roll"}
