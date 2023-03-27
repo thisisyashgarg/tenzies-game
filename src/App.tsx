@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { createWatchCompilerHost } from "typescript";
 import ConfettiEffect from "./components/ConfettiEffect";
 import Die from "./components/Die";
 import {
@@ -78,12 +77,12 @@ export default function App() {
     //   </button>
     // </main>
 
-    <main className="h-screen sm:h-[90vh] mr-9 m-10 bg-slate-200 rounded-lg flex flex-col justify-center items-center overflow-x-hidden">
+    <main className="h-screen sm:h-screen  bg-slate-100 rounded-lg flex flex-col justify-center items-center overflow-x-hidden">
       {tenzies && <ConfettiEffect />}
       <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-center">
         Tenzies
       </h1>
-      <p className="text-lg sm:text-2xl max-w-md mb-8 text-center">
+      <p className="text-lg  sm:text-2xl max-w-md mb-8 text-center">
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </p>
