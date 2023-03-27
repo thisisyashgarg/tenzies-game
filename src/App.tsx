@@ -77,12 +77,12 @@ export default function App() {
     //   </button>
     // </main>
 
-    <main className="h-screen sm:h-screen  bg-slate-100 rounded-lg flex flex-col justify-center items-center overflow-x-hidden">
+    <main className="h-screen sm:h-screen  rounded-lg flex flex-col justify-center items-center overflow-x-hidden my-4 sm:my-8">
       {tenzies && <ConfettiEffect />}
-      <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-center">
+      <h1 className="text-4xl sm:text-6xl font-bold mb-4 mt-8 sm:mt-0 text-center">
         Tenzies
       </h1>
-      <p className="text-lg  sm:text-2xl max-w-md mb-8 text-center">
+      <p className="text-lg sm:text-2xl max-w-md mb-8 text-center">
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </p>
