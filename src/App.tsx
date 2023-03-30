@@ -14,16 +14,7 @@ export default function App() {
   const [tenzies, setTenzies] = useState(false);
 
   useEffect(() => {
-    const firstDiceValue = dice[0].value;
-    const allDiceAreHeld = dice.every((curr) => curr.isHeld);
-    const allDiceHaveSameValue = dice.every(
-      (curr) => curr.value === firstDiceValue
-    );
-
-    if (allDiceAreHeld && allDiceHaveSameValue) {
-      setTenzies(true);
-      console.log("you have won");
-    }
+    checkWinningCondition();
   }, [dice]);
 
   function rollDice() {
@@ -45,6 +36,19 @@ export default function App() {
         return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
       })
     );
+  }
+
+  function checkWinningCondition() {
+    const firstDiceValue = dice[0].value;
+    const allDiceAreHeld = dice.every((curr) => curr.isHeld);
+    const allDiceHaveSameValue = dice.every(
+      (curr) => curr.value === firstDiceValue
+    );
+
+    if (allDiceAreHeld && allDiceHaveSameValue) {
+      setTenzies(true);
+      console.log("you have won");
+    }
   }
 
   return (
@@ -69,7 +73,7 @@ export default function App() {
         ))}
       </div>
       <button
-        className="px-4 sm:px-6 md:px-8 py-2 sm:py-4 md:py-6 text-lg sm:text-xl md:text-2xl text-white font-bold rounded-md bg-[#5036FF]  mt-8 sm:mt-10  tracking-wider mb-10"
+        className="mb-4 px-4 sm:px-6 md:px-8 py-2 sm:py-4 md:py-6 text-lg sm:text-xl md:text-2xl text-white font-semibold rounded-md bg-[#5036FF]  mt-8 sm:mt-10  tracking-wider "
         onClick={rollDice}
       >
         {tenzies ? "New Game" : "Roll"}
